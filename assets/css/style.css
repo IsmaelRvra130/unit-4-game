@@ -1,0 +1,84 @@
+body {
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ82WSxVM5RYOxRQBgYB8T5kiQNMdiSqvotgndoShRXclk0YFXu");
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center; 
+}
+h1 {
+    background-color: orange;
+    color:white;
+    font-size: 40px;
+    text-align: center;
+    height: 70px;
+    width: 350px;
+    line-height: 70px;
+}
+
+h2 {
+    height:80px;
+    width: 260px;
+    background-color: lightgray;
+    color: black;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+
+
+}
+
+.rules {
+    background-color:peachpuff;
+    height: 350px;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightseagreen;
+    text-align: left;
+    font-display: bold;
+    padding:18px;
+
+
+}
+
+#number-to-guess {
+    height: 100px;
+    width: 140px;
+    background-color: lightgreen;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    line-height: 45px;
+    margin-top: 0px;
+    margin-left: 100px;
+
+}
+#wins {
+    height: 50px;
+    width: 85px;
+    background-color: lightgreen;
+    color: black;
+    line-height: 40px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 270px;
+    margin-top: -165px;
+}
+
+#losses {
+    height: 45px;
+    width: 100px;
+    background-color: lightgreen;
+    color: black;
+    line-height: 40px;
+    font-size: 25px;
+    text-align: left;
+    margin-left: 270px;
+    margin-top: -20px;
+}
+/*
+.crystal-img {
+  width: 150px;
+  height: 150px;
+  margin: 50px;
+  float: left;
+}
+*/
