@@ -1,9 +1,11 @@
 body {
-    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ82WSxVM5RYOxRQBgYB8T5kiQNMdiSqvotgndoShRXclk0YFXu");
-    background-repeat: repeat;
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWqX2bwZpo-lkxQNebBfrAj2bDvnC9p5cy5NBncMsll4yyvBX");
+    height: auto;
+    width: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
-}
 h1 {
     background-color: orange;
     color:white;
