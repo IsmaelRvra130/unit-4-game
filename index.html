@@ -6,8 +6,97 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>CrystalsCollector</title>
-    <link href="\Users\ghost\code\homework\unit-4-game\assets\css\style.css" rel="stylesheet" type="text/css">
 
+    <style type="text/css">
+        body {
+            background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ82WSxVM5RYOxRQBgYB8T5kiQNMdiSqvotgndoShRXclk0YFXu");
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center; 
+        }
+        h1 {
+            background-color: orange;
+            color:white;
+            font-size: 40px;
+            text-align: center;
+            height: 70px;
+            width: 350px;
+            line-height: 70px;
+        }
+
+        h2 {
+            height:80px;
+            width: 260px;
+            background-color: lightgray;
+            color: black;
+            font-size: 30px;
+            line-height: 70px;
+            text-align: center;
+
+
+        }
+
+        .rules {
+            background-color:peachpuff;
+            height: 350px;
+            width: 400px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: lightseagreen;
+            text-align: left;
+            font-display: bold;
+            padding:18px;
+
+
+        }
+
+        #number-to-guess {
+            height: 100px;
+            width: 140px;
+            background-color: lightgreen;
+            color: black;
+            font-size: 50px;
+            text-align: center;
+            line-height: 45px;
+            margin-top: 0px;
+            margin-left: 100px;
+
+        }
+        #wins {
+            height: 50px;
+            width: 85px;
+            background-color: lightgreen;
+            color: black;
+            line-height: 40px;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 270px;
+            margin-top: -165px;
+        }
+
+        #losses {
+            height: 45px;
+            width: 100px;
+            background-color: lightgreen;
+            color: black;
+            line-height: 40px;
+            font-size: 25px;
+            text-align: left;
+            margin-left: 270px;
+            margin-top: -20px;
+        }
+/*
+        .crystal-img {
+          width: 150px;
+          height: 150px;
+          margin: 50px;
+          float: left;
+        }
+*/
+        
+        
+      </style>
     
 </head>
 <body>
@@ -20,8 +109,8 @@
     <!-- class holds crystal image.-->
     <div class="crystal-img"></div>
     
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
 
 $(document).ready(function() { 
     //Generates random number between 1-120.
@@ -65,6 +154,8 @@ $(document).ready(function() {
             alert("image error");
         }
         */
+        
+        
         console.log(numberOptions);
     }
         //Randomly generates the value of each crystal after each gameplay.
@@ -89,14 +180,14 @@ $(document).ready(function() {
          alert("You win!");
          //resetGame()
          wins ++;
-         //updateWinScore();
+         updateWinScore();
          resetGame();
         }
          else if (counter > targetNumber) {
         alert("You lose!!");
         //resetGame()
         losses ++;
-        //updateLossScore();
+        updateLossScore();
         resetGame();
         }
 
@@ -114,14 +205,14 @@ $(document).ready(function() {
         }
 
         function resetGame() {
-            location.reload();
             updateWinScore();
             updateLossScore();
-            var targetNumber = Math.floor(Math.random() * 119) + 1;
-            var numberOptions = Math.floor(Math.random() * 11) + 1;
-            //location.reload();
-            //targetNumber = String.fromCharCode(crystalValue);    
-	    }
+            targetNumber = Math.floor(Math.random() * 119) + 1;
+            numberOptions = Math.floor(Math.random() * 11) + 1;
+            $("#number-to-guess").text(targetNumber);
+            counter = 0;
+    
+	      }
 
 
 
@@ -137,10 +228,14 @@ $(document).ready(function() {
         //losses ++;
         //updateScore();
         //resetGame();
-       // }   
+       // }
+        
+        
     });
 });
 
-    </script>  
+    </script>
+    
+    
 </body>
 </html>

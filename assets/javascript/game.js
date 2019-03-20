@@ -1,17 +1,17 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
+<script type="text/javascript">
 
-$(document).ready(function() { 
+    $(document).ready(function() { 
     //Generates random number between 1-120.
-    var targetNumber = Math.floor(Math.random() * 119) + 1;
-    var numberOptions = Math.floor(Math.random() * 11) + 1;
-    var lockGame = false;
-    $("#number-to-guess").text(targetNumber);
+        var targetNumber = Math.floor(Math.random() * 119) + 1;
+        var numberOptions = Math.floor(Math.random() * 11) + 1;
+        var lockGame = false;
+        $("#number-to-guess").text(targetNumber);
     
-    var wins = 0; // variables.
-    var losses = 0;
-    var counter = 0;
-    var numberOptions = [];
+        var wins = 0; // variables.
+        var losses = 0;
+        var counter = 0;
+        var numberOptions = [];
     //var winDiv = document.getElementById ("#wins");
 	//var loseDiv = document.getElementById ("#losses");
 
@@ -44,14 +44,15 @@ $(document).ready(function() {
         }
         */
         console.log(numberOptions);
-    }
+        }
         //Randomly generates the value of each crystal after each gameplay.
-    function addCrystalNum(){
-        var newNum = Math.floor(Math.random() * 11) + 1;
-        if(numberOptions.includes(newNum)){
+        function addCrystalNum(){
+            var newNum = Math.floor(Math.random() * 11) + 1;
+        if (numberOptions.includes(newNum)){
             var notUsedNum = newNum + 1;
             numberOptions.push(notUsedNum);
-        }else{
+        }
+        else {
             numberOptions.push(newNum);
         }
     }
@@ -92,13 +93,13 @@ $(document).ready(function() {
         }
 
         function resetGame() {
-            location.reload();
-            updateWinScore();
-            updateLossScore();
-            var targetNumber = Math.floor(Math.random() * 119) + 1;
-            var numberOptions = Math.floor(Math.random() * 11) + 1;
-            //location.reload();
-            //targetNumber = String.fromCharCode(crystalValue);    
+        location.reset();
+        updateWinScore();
+        updateLossScore();
+        var targetNumber = Math.floor(Math.random() * 119) + 1;
+        var numberOptions = Math.floor(Math.random() * 11) + 1;
+        //location.reload();
+        //targetNumber = String.fromCharCode(crystalValue);    
 	    }
 
 
