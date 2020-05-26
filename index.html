@@ -5,181 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel= "stylesheet" type="text/css" href="C:\Users\ghost\code\homework\unit-4-game\assets\css\style.css">
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link rel= "stylesheet" type="text/css" href="assets/css/style.css">
     <title>CrystalsCollector</title>
-
-    <style type="text/css">
-        body {
-            background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWqX2bwZpo-lkxQNebBfrAj2bDvnC9p5cy5NBncMsll4yyvBX");
-            height: auto;
-            width: auto;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position: center; 
-        }
-        h1 {
-            background-color: orange;
-            color:white;
-            font-size: 40px;
-            text-align: center;
-            height: 70px;
-            width: 300px;
-            line-height: 70px;
-        }
-
-        h2 {
-            height:50px;
-            width: 260px;
-            background-color: lightgray;
-            color: black;
-            font-size: 30px;
-            line-height: 50px;
-            text-align: center;
-
-
-        }
-
-        .rules {
-            background-color:peachpuff;
-            height: 300px;
-            width: 400px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: lightseagreen;
-            text-align: left;
-            font-display: bold;
-            padding:18px;
-        }
-
-        #number-to-guess {
-            height: 100px;
-            width: 200px;
-            background-color: lightgreen;
-            color: black;
-            font-size: 50px;
-            text-align: center;
-            line-height: 45px;
-            margin-top: 0px;
-            margin-left: 100px;
-
-        }
-        #wins {
-            height: 50px;
-            width: 85px;
-            background-color: lightgreen;
-            color: black;
-            line-height: 50px;
-            font-size: 25px;
-            text-align: left;
-            margin-left: 270px;
-            margin-top: -165px;
-        }
-
-        #losses {
-            height: 50px;
-            width: 100px;
-            background-color: lightgreen;
-            color: black;
-            line-height: 50px;
-            font-size: 25px;
-            text-align: left;
-            margin-left: 270px;
-            margin-top: -20px;
-        }  
-      </style>
     
 </head>
 <body>
-    <h1>Crystal game!</h1>
-    <p class="rules">You will be givin a random number at the start of the game.<br><br>There are four crystals below. <br> By clicking on a crystal you will add a specific amount of points to  your total score.<br><br>You win the game by matching your total score to random numbers,you lose the game if your total score goes above the random number.<br><br>The value of each crystal is hidden from you until  you click on it.<br><br>Each time when the game starts,the game will change the values of each crystal.</p>
-    <p id="number-to-guess:"><h2>Number to guess: </h2><span id="number-to-guess"></span><br><br><br></p>
-    <p id="wins">Wins: <span id="wins"></span></p> 
-    <p id="losses">Losses: <span id="losses"></span></p>
-
-    <!-- class holds crystal image.-->
-    <div class="crystal-img"></div>
+    <div id="wrapper">
+        <h1>Crystal game!</h1>
+        <p class="rules">You will be givin a random number at the start of the game.<br><br>There are four crystals below. <br> By clicking on a crystal you will add a specific amount of points to  your total score.<br><br>You win the game by matching your total score to random numbers,you lose the game if your total score goes above the random number.<br><br>The value of each crystal is hidden from you until  you click on it.<br><br>Each time when the game starts,the game will change the values of each crystal.</p>
+        <p id = "alert"><span id="alert"></span></p>
+        <p id="number-to-guess"><h2>Number to guess: </h2><span id="number-to-guess"></span><br><br><br></p>
+        <p id="wins">Wins: <span id="wins"></span></p> 
+        <p id="losses">Losses: <span id="losses"></span></p>
+        <p id="your-score">Current score: <span id="your-score"></span></p>
     
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
-
-$(document).ready(function() { 
-    //Generates random number between 1-120.
-    var targetNumber = Math.floor(Math.random() * 119) + 1;
-    var numberOptions = Math.floor(Math.random() * 11) + 1;
-    var lockGame = false;
-    $("#number-to-guess").text(targetNumber);
+        <!-- class holds crystal image.-->
+        <div id ="crystalsDiv">
+            <div id = "row">
+                <div id = "column">
+                    <img src="assets/images/blue.jpeg" width="200px" height="150px" id = "blue"></div>
+                    <img src="assets/images/green.jpeg"width="200px" height="150px" id = "green"></div>
+                    <img src="assets/images/red.jpeg" width="200px" height="150px" id = "red"></div>
+                    <img src="assets/images/yellow.jpeg" width="200px"height="150px" id = "yellow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    var wins = 0; // variables.
-    var losses = 0;
-    var counter = 0;
-    var numberOptions = [];
-    
-        //Loop for the 4 crystals and their value.
-    for (var i = 0; i < 4; i++) {
-        addCrystalNum();
-        var imageCrystal = $("<img>");
-        imageCrystal.addClass("crystal-image");
-        imageCrystal.attr("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjkn0OaLDc9w9qlVH5FRNgevIXPC71hJFIAJ-OOY5b_hDtn3u");
-        imageCrystal.attr("data-crystalvalue", numberOptions[i]);
-        $(".crystal-img").append(imageCrystal);
-        console.log(numberOptions);
-    }
-        //Randomly generates the value of each crystal after each gameplay.
-    function addCrystalNum(){
-        var newNum = Math.floor(Math.random() * 11) + 1;
-        if(numberOptions.includes(newNum)){
-            var notUsedNum = newNum + 1;
-            numberOptions.push(notUsedNum);
-        }else{
-            numberOptions.push(newNum);
-        }
-    }
-        //Function for the clicks of the crystals.
-    $(".crystal-image").on("click", function() {
-        var crystalValue = ($(this).attr("data-crystalvalue"));
-        crystalValue = parseInt(crystalValue);
-        counter += crystalValue;
-        alert("New score: " + counter);
 
-        //condition for wins & losses.
-        if (counter === targetNumber) {
-         alert("You win!");
-         wins ++;
-         updateWinScore();
-         resetGame();
-        }
-         else if (counter > targetNumber) {
-        alert("You lose!!");
-        losses ++;
-        updateLossScore();
-        resetGame();
-        }
+<!-- 
+//Change background (something more hd).
+//Wrap and center the body.
+//Div that shows what the current number is without an alert .html();
+//Change images, add padding to crystals (diff crystal for each button/ space between crystals)
+//Make it responsive.
+//Update a "README.md".
+//Commit all changes. -->
 
-        updateWinScore();
-        updateLossScore();
-
-        //update win score function.
-        function updateWinScore() {
-        document.querySelector("#wins").innerHTML = "wins : " + wins;
-        }
-        //update loss function.
-        function updateLossScore() {
-        document.querySelector("#losses").innerHTML = "losses :" + losses;
-        }
-
-        //resets the game function.
-        function resetGame() {
-            updateWinScore();
-            updateLossScore();
-            targetNumber = Math.floor(Math.random() * 119) + 1;
-            numberOptions = Math.floor(Math.random() * 11) + 1;
-            $("#number-to-guess").text(targetNumber);
-            counter = 0;
-    
-	      }   
-    });
-});
-
-    </script>  
 </body>
 </html>

@@ -1,56 +1,64 @@
 body {
-    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmWqX2bwZpo-lkxQNebBfrAj2bDvnC9p5cy5NBncMsll4yyvBX");
-    height: auto;
-    width: auto;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+    /* background:url(""); */
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+   
+   
+}
+
+#wrapper{
+    width:100%;
+    height: 100%;
+    text-align: center; 
+    
+    
+}
+
 h1 {
     background-color: orange;
     color:white;
     font-size: 40px;
     text-align: center;
     height: 70px;
-    width: 350px;
+    width: 300px;
     line-height: 70px;
 }
 
 h2 {
-    height:80px;
+    height:50px;
     width: 260px;
     background-color: lightgray;
     color: black;
     font-size: 30px;
-    line-height: 70px;
+    line-height: 50px;
     text-align: center;
 
 
 }
 
 .rules {
+    
     background-color:peachpuff;
-    height: 350px;
+    height: 300px;
     width: 400px;
     font-family: Arial, Helvetica, sans-serif;
     color: lightseagreen;
     text-align: left;
     font-display: bold;
     padding:18px;
-
-
 }
 
 #number-to-guess {
     height: 100px;
-    width: 140px;
+    width: 200px;
     background-color: lightgreen;
     color: black;
     font-size: 50px;
     text-align: center;
     line-height: 45px;
-    margin-top: 0px;
-    margin-left: 100px;
+    
+    
 
 }
 #wins {
@@ -58,29 +66,65 @@ h2 {
     width: 85px;
     background-color: lightgreen;
     color: black;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 25px;
-    text-align: left;
-    margin-left: 270px;
-    margin-top: -165px;
+    text-align: center;
+  
 }
 
 #losses {
-    height: 45px;
+    height: 50px;
     width: 100px;
     background-color: lightgreen;
     color: black;
-    line-height: 40px;
+    line-height: 50px;
     font-size: 25px;
-    text-align: left;
-    margin-left: 270px;
-    margin-top: -20px;
+    text-align: center;
+   
+}  
+
+/* #crystal-img{
+    
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjkn0OaLDc9w9qlVH5FRNgevIXPC71hJFIAJ-OOY5b_hDtn3u");
+    height: 150px;
+    width: 200px;
+    display: -webkit-inline-flex;
+    margin: 5px;
+    position: block;
+    float:left;
+} */
+
+#crystalsDiv{
+    display: inline-flex;
+    
 }
-/*
-.crystal-img {
-  width: 150px;
-  height: 150px;
-  margin: 50px;
-  float: left;
+
+#row {
+    display: inline-flex;
+
 }
-*/
+
+#alert {
+    text-size-adjust: 40px;
+    color: maroon;
+}
+
+
+#blue{
+    padding: 10px;  
+}
+#green{
+    padding:10px;
+}
+#red{
+    padding: 10px;
+}
+#yellow{
+    padding: 10px;
+}
+  
+#column {
+    /* display:flex; */
+    
+    
+  }
