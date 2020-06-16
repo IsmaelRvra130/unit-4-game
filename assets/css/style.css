@@ -1,11 +1,5 @@
 body {
     background:url("https://i.pinimg.com/originals/d8/73/77/d873771b5dd915a0bea16be2974680ea.jpg");
-    background-repeat: no-repeat;https://i.pinimg.com/originals/d8/73/77/d873771b5dd915a0bea16be2974680ea.jpg
-    background-size: 100%;
-
-    
-    /* background-color: yellow;  */
-   
 }
 
 #wrapper{
@@ -22,8 +16,7 @@ body {
   
   /* Clear floats after the columns */
   .row{
-    display: flex;
-    
+    display: flex; 
   }
 
 h1 {
@@ -47,7 +40,6 @@ h2 {
     font-size: 30px;
     line-height: 50px;
     text-align: center;
-
 }
 
 .rules {
@@ -82,7 +74,6 @@ h2 {
     line-height: 50px;
     font-size: 25px;
     text-align: center;
-  
 }
 
 #losses {
@@ -94,8 +85,7 @@ h2 {
     font-size: 25px;
     text-align: center;
     margin-top: -20px;
-    margin-bottom: -20px;
-   
+    margin-bottom: -20px; 
 }  
 
 #your-score{
@@ -109,54 +99,32 @@ h2 {
     margin-top: -2px;
 }
 
-/* #crystal-img{
-    
-    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqjkn0OaLDc9w9qlVH5FRNgevIXPC71hJFIAJ-OOY5b_hDtn3u");
-    height: 150px;
-    width: 200px;
-    display: -webkit-inline-flex;
-    margin: 5px;
-    position: block;
-    float:left;
-} */
-
 #crystalsDiv{
-    display: inline-flex;
-    
-    
+    display: inline-flex;  
 }
 
 #row {
     display: inline-flex;
-    
-
 }
-
-#alert {
-    text-size-adjust: 40px;
-    color: maroon;
-}
-
 
 #blue{
     padding: 10px;  
     clip-path: polygon(50% 12%, 83% 12%, 100% 43%, 78% 70%, 51% 100%, 51% 100%, 24% 72%, 0% 43%, 17% 12%);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ;
-}
-#blue:hover{
-    color: lightslategrey;
     cursor: pointer;
 }
+
 #green{
     padding:10px;
     clip-path: polygon(50% 12%, 83% 12%, 100% 43%, 78% 70%, 51% 100%, 51% 100%, 24% 72%, 0% 43%, 17% 12%);
     cursor: pointer;
-}
+} 
+
 #red{
     padding: 10px;
     clip-path: polygon(50% 12%, 83% 12%, 100% 43%, 78% 70%, 51% 100%, 51% 100%, 24% 72%, 0% 43%, 17% 12%);
     cursor: pointer;
 }
+
 #yellow{
     padding: 10px;
     clip-path: polygon(50% 12%, 83% 12%, 100% 43%, 78% 70%, 51% 100%, 51% 100%, 24% 72%, 0% 43%, 17% 12%);
@@ -166,20 +134,13 @@ h2 {
 .animate__bounceInUp{
     animation-delay: 1s;
 }
+
 .animate__bounceInDown{
     animation-delay: 2s;
 }
+
 .animate__bounceInRight{
     animation-delay: 3s;
 }
-/* .diamond {
-    position: relative;
-    
-    width: 200px;
-    height: 0;
-      
-    border-right: 100px solid transparent;
-    border-bottom: 80px solid hotpink;
-    border-left: 100px solid transparent;
-  } */
+
  
