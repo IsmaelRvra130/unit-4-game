@@ -7,27 +7,49 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/javascript/game.js"></script>
     <link rel= "stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+
     <title>CrystalsCollector</title>
     
 </head>
 <body>
     <div id="wrapper">
         <h1>Crystal game!</h1>
-        <p class="rules">You will be givin a random number at the start of the game.<br><br>There are four crystals below. <br> By clicking on a crystal you will add a specific amount of points to  your total score.<br><br>You win the game by matching your total score to random numbers,you lose the game if your total score goes above the random number.<br><br>The value of each crystal is hidden from you until  you click on it.<br><br>Each time when the game starts,the game will change the values of each crystal.</p>
-        <p id = "alert"><span id="alert"></span></p>
-        <p id="number-to-guess"><h2>Number to guess: </h2><span id="number-to-guess"></span><br><br><br></p>
-        <p id="wins">Wins: <span id="wins"></span></p> 
-        <p id="losses">Losses: <span id="losses"></span></p>
+        <p class="rules">You will be givin a random number at the start of the game.<br>There are four crystals below. <br> By clicking on a crystal you will add a specific amount of points to  your total score. You win the game by matching your total score to random numbers,you lose the game if your total score goes above the random number.<br>The value of each crystal is hidden from you until  you click on it.<br>Each time when the game starts,the game will change the values of each crystal.</p>
+        <!-- <p id = "alert"><span id="alert"></span></p> -->
+        <div class= "row">
+            <div class= "column">
+                <h2>Number to guess:</h2>
+                
+                <h2><p id="number-to-guess"></p></h2>
+            </div>
+
+            <div class= "column">
+                
+                <p id="wins"><span id="wins"></span></p> 
+                <p id="losses"><span id="losses"></span></p>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class= "column">
+                <p id="wins">Wins: <span id="wins"></span></p> 
+                <p id="losses">Losses: <span id="losses"></span></p>
+            </div>
+        </div> -->
+        <!-- <h2>Number to guess</h2><p id="number-to-guess"></p> -->
+        <!-- <p id="wins">Wins: <span id="wins"></span></p> 
+        <p id="losses">Losses: <span id="losses"></span></p> -->
         <p id="your-score">Current score: <span id="your-score"></span></p>
     
         <!-- class holds crystal image.-->
         <div id ="crystalsDiv">
             <div id = "row">
                 <div id = "column">
-                    <img src="assets/images/blue.jpeg" width="200px" height="150px" id = "blue"></div>
-                    <img src="assets/images/green.jpeg"width="200px" height="150px" id = "green"></div>
-                    <img src="assets/images/red.jpeg" width="200px" height="150px" id = "red"></div>
-                    <img src="assets/images/yellow.jpeg" width="200px"height="150px" id = "yellow"></div>
+                    <img src="assets/images/blue.jpeg" width="220px" height="170px" id = "blue" class="animate__animated animate__bounceInLeft"></div>
+                    <img src="assets/images/green.jpeg"width="220px" height="170px" id = "green" class="animate__animated animate__bounceInUp"></div>
+                    <img src="assets/images/red.jpeg" width="220px" height="170px" id = "red" class="animate__animated animate__bounceInDown"></div>
+                    <img src="assets/images/yellow.jpeg" width="220px" height="170px" id = "yellow" class="animate__animated animate__bounceInRight"></div>
                 </div>
             </div>
         </div>

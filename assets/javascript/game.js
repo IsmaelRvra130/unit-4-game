@@ -38,6 +38,8 @@ $(document).ready(function() {
         }
     };
 
+    
+
     //Function to start the game.
     function startGame() {
         targetNumber = getRandom(1, 119);
@@ -46,7 +48,7 @@ $(document).ready(function() {
         crystal.green.value = getRandom(1, 12);
         crystal.yellow.value = getRandom(1, 12);
         $("#number-to-guess").text(targetNumber);
-        $("#your-score").text(counter);
+        $("#your-score").text("This is your current score: " + counter);
         updateWinScore();
         updateLossScore();
     }   
@@ -58,26 +60,25 @@ $(document).ready(function() {
 
     //update win score function.
     function updateWinScore() {
-    document.querySelector("#wins").innerHTML = "wins : " + wins;
+    document.querySelector("#wins").innerHTML = "Wins: " + wins;
     }
 
     //update loss function.
     function updateLossScore() {
-    document.querySelector("#losses").innerHTML = "losses :" + losses;
+    document.querySelector("#losses").innerHTML = "Losses: " + losses;
     }
 
     //Function that adds value to the crystals.
     var addvalue = function(clickedCrystal){
         counter += clickedCrystal.value;
-        $("#your-score").text(counter);
+        $("#your-score").text("This is your current score: " + counter);
         checkWin();
     }
 
     //Fuction to reset the game after a play.
     function resetGame(){
         counter = 0;
-        startGame()
-         
+        startGame();    
     }
 
     //  MAIN PROCESS
@@ -103,16 +104,18 @@ $(document).ready(function() {
     //Function for the Win/loss logic.
     var checkWin = function(){
         if (counter > targetNumber) {
-            $("#alert").text("Sorry you lost");
-            setTimeout(function() { $("#alert").hide();}, 2000);
+             alert("Oh Nooo! Its okay try again..")
+            // $("#alert").text("Sorry you lost");
+            // setTimeout(function() { $("#alert").hide();}, 2000);
             losses++;
             updateLossScore()
             resetGame();    
         }
 
         else if ( counter === targetNumber) {
-            $("#alert").text("Congrats!"); 
-            setTimeout(function() { $("#alert").hide();}, 2000);
+            alert("YES!! THATS WHAT IM TALKIN ABOUT!!")
+            // $("#alert").text("Congrats!"); 
+            // setTimeout(function() { $("#alert").hide();}, 2000);
             wins++;
             updateWinScore()
             resetGame();    
